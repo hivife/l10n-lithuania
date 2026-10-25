@@ -370,87 +370,19 @@ ul.auto-toc {
 !! source digest: sha256:1a3b761a805752c971650e8f97b7021d1da3451684d1c5cec9ab95f4670ece9e
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 <p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/lgpl-3.0-standalone.html"><img alt="License: LGPL-3" src="https://img.shields.io/badge/license-LGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/hivife/l10n-lithuania/tree/20.0/l10n_lt_saft_export"><img alt="hivife/l10n-lithuania" src="https://img.shields.io/badge/github-hivife%2Fl10n--lithuania-lightgray.png?logo=github" /></a></p>
-<p>This module generates the Lithuanian standard accounting data file
-<strong>SAF-T</strong> (<em>Standartinė apskaitos duomenų rinkmena</em>, XSD version
-<strong>2.01</strong>) requested by the State Tax Inspectorate (VMI, i.SAF-T) and
-validates it against the official schema shipped with the module.</p>
-<p>All parts of the file are covered:</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead valign="bottom">
-<tr><th class="head">SAF-T part</th>
-<th class="head">Source in Odoo</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr><td>Header</td>
-<td>company data, SAF-T settings,
-export wizard</td>
-</tr>
-<tr><td>GeneralLedgerAccounts</td>
-<td>posted journal items; income and
-expense accounts restart at the
-beginning of the financial year,
-the result of previous years is
-shown on the unaffected earnings
-account</td>
-</tr>
-<tr><td>Customers / Suppliers</td>
-<td>partners used in the file,
-receivable / payable balances
-per account, open invoices at
-the beginning of the period</td>
-</tr>
-<tr><td>TaxTable</td>
-<td>company taxes; <tt class="docutils literal">STITaxCode</tt> is
-the VMI tax code of the
-<tt class="docutils literal">l10n_lt</tt> taxes (fallback
-<tt class="docutils literal">PVM100</tt>)</td>
-</tr>
-<tr><td>UOMTable, Products</td>
-<td>units of measure and products
-used in the file</td>
-</tr>
-<tr><td>AnalysisTypeTable</td>
-<td>analytic accounts used in the
-analytic distribution</td>
-</tr>
-<tr><td>Assets, AssetTransactions</td>
-<td>built-in register of fixed
-assets (straight-line
-depreciation)</td>
-</tr>
-<tr><td>Owners</td>
-<td>built-in register of owners /
-shareholders</td>
-</tr>
-<tr><td>GeneralLedgerEntries</td>
-<td>posted journal entries, grouped
-by journal</td>
-</tr>
-<tr><td>SalesInvoices, PurchaseInvoices</td>
-<td>customer and vendor invoices and
-credit notes</td>
-</tr>
-<tr><td>Payments</td>
-<td>entries of bank, cash and credit
-card journals</td>
-</tr>
-<tr><td>MovementTypeTable,
-PhysicalStock, MovementOfGoods</td>
-<td>done stock moves, provided by
-<tt class="docutils literal">l10n_lt_saft_export_stock</tt></td>
-</tr>
-</tbody>
-</table>
-<p>The file can be generated complete (data type <tt class="docutils literal">F</tt>) or split by data
-type (<tt class="docutils literal">GL</tt>, <tt class="docutils literal">SI</tt>, <tt class="docutils literal">PI</tt>, <tt class="docutils literal">PA</tt>, <tt class="docutils literal">MG</tt>, <tt class="docutils literal">AS</tt>). The data groups
-written for each data type follow table 5 of the VMI XSD specification.</p>
-<p>The module works with Odoo Community Edition and does not depend on any
-Enterprise module.</p>
+<p><strong>i.SAF (monthly invoice register) is in development and will follow in
+a separate module.</strong></p>
+<p>Generates the Lithuanian <strong>SAF-T</strong> file (XSD version 2.01) of the State
+Tax Inspectorate (VMI) and validates it against the official schema.</p>
+<ul class="simple">
+<li>Complete file (<tt class="docutils literal">F</tt>) or split by data type (<tt class="docutils literal">GL</tt>, <tt class="docutils literal">SI</tt>, <tt class="docutils literal">PI</tt>,
+<tt class="docutils literal">PA</tt>, <tt class="docutils literal">MG</tt>, <tt class="docutils literal">AS</tt>)</li>
+<li>Master files, general ledger entries, sales and purchase invoices,
+payments</li>
+<li>Simple registers for fixed assets and owners</li>
+<li>Stock movements and physical stock with <tt class="docutils literal">l10n_lt_saft_export_stock</tt></li>
+<li>Works with Odoo Community Edition, no Enterprise modules required</li>
+</ul>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -469,51 +401,25 @@ Enterprise module.</p>
 <div class="section" id="configuration">
 <h1><a class="toc-backref" href="#toc-entry-1">Configuration</a></h1>
 <ol class="arabic simple">
-<li>Company: set the Company ID (JAK, additional identifier <em>Company ID</em>
-of the company partner) or the Tax ID, the address (city, postal
-code) and a phone number.</li>
-<li><em>Invoicing &gt; Configuration &gt; Settings &gt; SAF-T Lithuania</em>: set the
-entity code (<tt class="docutils literal">Header/Entity</tt>), the tax accounting basis (accrual /
-cash) and the contact person.</li>
-<li>Chart of accounts, tab <em>SAF-T (LT)</em>: check the SAF-T account type
-(pre-filled from the Odoo account type) and enter the code and name
-of the VMI account classifier (Annex 2 of the SAF-T description).
-Without a classifier code the account code is used.</li>
-<li>Journals: check the <em>SAF-T Journal Type</em> (pre-filled from the journal
-type).</li>
-<li><em>Invoicing &gt; Configuration &gt; SAF-T (LT)</em>: register fixed assets and
-owners.</li>
+<li>Company: Company ID (JAK) or Tax ID, city, postal code and phone.</li>
+<li><em>Invoicing &gt; Configuration &gt; Settings &gt; SAF-T Lithuania</em>: entity
+code, tax accounting basis and contact person.</li>
+<li>Optional: VMI account classifier per account (tab <em>SAF-T (LT)</em>),
+fixed assets and owners (<em>Invoicing &gt; Configuration &gt; SAF-T (LT)</em>).</li>
 </ol>
 </div>
 <div class="section" id="usage">
 <h1><a class="toc-backref" href="#toc-entry-2">Usage</a></h1>
-<ol class="arabic simple">
-<li>Go to <em>Invoicing &gt; Reporting &gt; SAF-T Export (LT)</em>.</li>
-<li>Choose the period (at most one financial year), the data type (<tt class="docutils literal">F</tt>
-for the complete file or one of <tt class="docutils literal">GL</tt>, <tt class="docutils literal">SI</tt>, <tt class="docutils literal">PI</tt>, <tt class="docutils literal">PA</tt>,
-<tt class="docutils literal">MG</tt>, <tt class="docutils literal">AS</tt>) and the tax accounting basis.</li>
-<li>Keep <em>Validate against XSD</em> checked and click <em>Generate</em>.</li>
-<li>Download the generated XML file and upload it to the VMI i.SAF-T
-portal.</li>
-</ol>
-<p>If mandatory company data is missing, or if the generated file does not
-match the schema, the wizard shows the problems instead of a file.</p>
+<p><em>Invoicing &gt; Reporting &gt; SAF-T Export (LT)</em>: choose period and data
+type, click <em>Generate</em> and download the XML file.</p>
 </div>
 <div class="section" id="known-issues-roadmap">
 <h1><a class="toc-backref" href="#toc-entry-3">Known issues / Roadmap</a></h1>
 <ul class="simple">
-<li>The account classifier codes of VMI (Annex 2 of the SAF-T description)
-are not pre-filled for the Lithuanian chart of accounts yet.</li>
-<li>A file is always generated in one part (<tt class="docutils literal">NumberOfParts</tt> =
-<tt class="docutils literal">PartNumber</tt> = 1); very large files are not split into several
-parts.</li>
-<li>Ship-to / ship-from data, order references and settlement discounts of
-invoices are not exported.</li>
-<li>Line level tax amounts of invoices are computed from the tax rate; the
-document totals use the posted tax lines.</li>
-<li>The asset register is intentionally minimal (straight-line, monthly
-depreciation) and does not post depreciation entries.</li>
-<li>The i.SAF monthly invoice register is not part of this module.</li>
+<li>i.SAF monthly invoice register (in development)</li>
+<li>Pre-filled VMI account classifiers for the Lithuanian chart of
+accounts</li>
+<li>Splitting very large files into several parts</li>
 </ul>
 </div>
 <div class="section" id="bug-tracker">

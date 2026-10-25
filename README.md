@@ -2,6 +2,8 @@
 
 Odoo 20.0 Community add-ons for Lithuanian legal reporting.
 
+**i.SAF (monthly invoice register) is in development.**
+
 [//]: # (addons)
 
 Available addons

@@ -22,68 +22,19 @@ Lithuania SAF-T Export
 
 |badge1| |badge2| |badge3|
 
-This module generates the Lithuanian standard accounting data file
-**SAF-T** (*Standartinė apskaitos duomenų rinkmena*, XSD version
-**2.01**) requested by the State Tax Inspectorate (VMI, i.SAF-T) and
-validates it against the official schema shipped with the module.
+**i.SAF (monthly invoice register) is in development and will follow in
+a separate module.**
 
-All parts of the file are covered:
+Generates the Lithuanian **SAF-T** file (XSD version 2.01) of the State
+Tax Inspectorate (VMI) and validates it against the official schema.
 
-+----------------------------------+----------------------------------+
-| SAF-T part                       | Source in Odoo                   |
-+==================================+==================================+
-| Header                           | company data, SAF-T settings,    |
-|                                  | export wizard                    |
-+----------------------------------+----------------------------------+
-| GeneralLedgerAccounts            | posted journal items; income and |
-|                                  | expense accounts restart at the  |
-|                                  | beginning of the financial year, |
-|                                  | the result of previous years is  |
-|                                  | shown on the unaffected earnings |
-|                                  | account                          |
-+----------------------------------+----------------------------------+
-| Customers / Suppliers            | partners used in the file,       |
-|                                  | receivable / payable balances    |
-|                                  | per account, open invoices at    |
-|                                  | the beginning of the period      |
-+----------------------------------+----------------------------------+
-| TaxTable                         | company taxes; ``STITaxCode`` is |
-|                                  | the VMI tax code of the          |
-|                                  | ``l10n_lt`` taxes (fallback      |
-|                                  | ``PVM100``)                      |
-+----------------------------------+----------------------------------+
-| UOMTable, Products               | units of measure and products    |
-|                                  | used in the file                 |
-+----------------------------------+----------------------------------+
-| AnalysisTypeTable                | analytic accounts used in the    |
-|                                  | analytic distribution            |
-+----------------------------------+----------------------------------+
-| Assets, AssetTransactions        | built-in register of fixed       |
-|                                  | assets (straight-line            |
-|                                  | depreciation)                    |
-+----------------------------------+----------------------------------+
-| Owners                           | built-in register of owners /    |
-|                                  | shareholders                     |
-+----------------------------------+----------------------------------+
-| GeneralLedgerEntries             | posted journal entries, grouped  |
-|                                  | by journal                       |
-+----------------------------------+----------------------------------+
-| SalesInvoices, PurchaseInvoices  | customer and vendor invoices and |
-|                                  | credit notes                     |
-+----------------------------------+----------------------------------+
-| Payments                         | entries of bank, cash and credit |
-|                                  | card journals                    |
-+----------------------------------+----------------------------------+
-| MovementTypeTable,               | done stock moves, provided by    |
-| PhysicalStock, MovementOfGoods   | ``l10n_lt_saft_export_stock``    |
-+----------------------------------+----------------------------------+
-
-The file can be generated complete (data type ``F``) or split by data
-type (``GL``, ``SI``, ``PI``, ``PA``, ``MG``, ``AS``). The data groups
-written for each data type follow table 5 of the VMI XSD specification.
-
-The module works with Odoo Community Edition and does not depend on any
-Enterprise module.
+- Complete file (``F``) or split by data type (``GL``, ``SI``, ``PI``,
+  ``PA``, ``MG``, ``AS``)
+- Master files, general ledger entries, sales and purchase invoices,
+  payments
+- Simple registers for fixed assets and owners
+- Stock movements and physical stock with ``l10n_lt_saft_export_stock``
+- Works with Odoo Community Edition, no Enterprise modules required
 
 **Table of contents**
 
@@ -93,50 +44,25 @@ Enterprise module.
 Configuration
 =============
 
-1. Company: set the Company ID (JAK, additional identifier *Company ID*
-   of the company partner) or the Tax ID, the address (city, postal
-   code) and a phone number.
-2. *Invoicing > Configuration > Settings > SAF-T Lithuania*: set the
-   entity code (``Header/Entity``), the tax accounting basis (accrual /
-   cash) and the contact person.
-3. Chart of accounts, tab *SAF-T (LT)*: check the SAF-T account type
-   (pre-filled from the Odoo account type) and enter the code and name
-   of the VMI account classifier (Annex 2 of the SAF-T description).
-   Without a classifier code the account code is used.
-4. Journals: check the *SAF-T Journal Type* (pre-filled from the journal
-   type).
-5. *Invoicing > Configuration > SAF-T (LT)*: register fixed assets and
-   owners.
+1. Company: Company ID (JAK) or Tax ID, city, postal code and phone.
+2. *Invoicing > Configuration > Settings > SAF-T Lithuania*: entity
+   code, tax accounting basis and contact person.
+3. Optional: VMI account classifier per account (tab *SAF-T (LT)*),
+   fixed assets and owners (*Invoicing > Configuration > SAF-T (LT)*).
 
 Usage
 =====
 
-1. Go to *Invoicing > Reporting > SAF-T Export (LT)*.
-2. Choose the period (at most one financial year), the data type (``F``
-   for the complete file or one of ``GL``, ``SI``, ``PI``, ``PA``,
-   ``MG``, ``AS``) and the tax accounting basis.
-3. Keep *Validate against XSD* checked and click *Generate*.
-4. Download the generated XML file and upload it to the VMI i.SAF-T
-   portal.
-
-If mandatory company data is missing, or if the generated file does not
-match the schema, the wizard shows the problems instead of a file.
+*Invoicing > Reporting > SAF-T Export (LT)*: choose period and data
+type, click *Generate* and download the XML file.
 
 Known issues / Roadmap
 ======================
 
-- The account classifier codes of VMI (Annex 2 of the SAF-T description)
-  are not pre-filled for the Lithuanian chart of accounts yet.
-- A file is always generated in one part (``NumberOfParts`` =
-  ``PartNumber`` = 1); very large files are not split into several
-  parts.
-- Ship-to / ship-from data, order references and settlement discounts of
-  invoices are not exported.
-- Line level tax amounts of invoices are computed from the tax rate; the
-  document totals use the posted tax lines.
-- The asset register is intentionally minimal (straight-line, monthly
-  depreciation) and does not post depreciation entries.
-- The i.SAF monthly invoice register is not part of this module.
+- i.SAF monthly invoice register (in development)
+- Pre-filled VMI account classifiers for the Lithuanian chart of
+  accounts
+- Splitting very large files into several parts
 
 Bug Tracker
 ===========
