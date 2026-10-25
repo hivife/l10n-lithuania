@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_account_form_inherit_l10n_lt_saft" model="ir.ui.view">
+        <field name="name">account.account.form.inherit.l10n_lt_saft</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="l10n_lt_saft" string="SAF-T (LT)">
+                    <group>
+                        <group>
+                            <field name="l10n_lt_saft_account_type"/>
+                            <field name="l10n_lt_saft_account_table_id" placeholder="Account code is used if empty"/>
+                            <field name="l10n_lt_saft_account_table_description" placeholder="Account name is used if empty"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_list_inherit_l10n_lt_saft" model="ir.ui.view">
+        <field name="name">account.account.list.inherit.l10n_lt_saft</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='account_type']" position="after">
+                <field name="l10n_lt_saft_account_type" optional="hide"/>
+                <field name="l10n_lt_saft_account_table_id" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

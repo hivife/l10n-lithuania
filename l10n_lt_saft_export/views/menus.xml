@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="menu_l10n_lt_saft_export"
+              name="SAF-T Export (LT)"
+              parent="account.menu_finance_reports"
+              action="action_l10n_lt_saft_export_wizard"
+              groups="account.group_account_manager"
+              sequence="90"/>
+
+    <menuitem id="menu_l10n_lt_saft_config"
+              name="SAF-T (LT)"
+              parent="account.menu_finance_configuration"
+              groups="account.group_account_manager"
+              sequence="90"/>
+    <menuitem id="menu_l10n_lt_saft_asset"
+              name="Assets"
+              parent="menu_l10n_lt_saft_config"
+              action="action_l10n_lt_saft_asset"
+              sequence="10"/>
+    <menuitem id="menu_l10n_lt_saft_owner"
+              name="Owners"
+              parent="menu_l10n_lt_saft_config"
+              action="action_l10n_lt_saft_owner"
+              sequence="20"/>
+</odoo>

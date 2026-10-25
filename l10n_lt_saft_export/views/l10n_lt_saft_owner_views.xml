@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="l10n_lt_saft_owner_list" model="ir.ui.view">
+        <field name="name">l10n_lt.saft.owner.list</field>
+        <field name="model">l10n_lt.saft.owner</field>
+        <field name="arch" type="xml">
+            <list string="SAF-T Owners" editable="bottom">
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="partner_id"/>
+                <field name="owner_code"/>
+                <field name="account_id"/>
+                <field name="shares_quantity"/>
+                <field name="shares_amount"/>
+                <field name="shares_type"/>
+                <field name="shares_acquisition_date"/>
+                <field name="shares_transfer_date" optional="hide"/>
+                <field name="currency_id" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_l10n_lt_saft_owner" model="ir.actions.act_window">
+        <field name="name">SAF-T Owners</field>
+        <field name="res_model">l10n_lt.saft.owner</field>
+        <field name="view_mode">list</field>
+    </record>
+</odoo>

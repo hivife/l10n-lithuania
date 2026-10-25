@@ -1,0 +1,716 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_lt_saft_export
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0-20261015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-25 14:53+0000\n"
+"PO-Revision-Date: 2026-10-25 14:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_export.py:0
+msgid ""
+"A SAF-T file (or file part) may not cover more than one financial year. The "
+"financial year of %(date_from)s ends on %(fy_end)s."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__data_type__as
+msgid "AS - Asset transactions"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model,name:l10n_lt_saft_export.model_account_account
+msgid "Account"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_account_account__l10n_lt_saft_account_table_id
+msgid ""
+"Account code according to the VMI account classifiers No. 1 - No. 3 (Annex 2"
+" of the SAF-T description). The account code is used when empty."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.view_account_form_inherit_l10n_lt_saft
+msgid "Account code is used if empty"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_l10n_lt_saft_asset__account_id
+msgid "Account holding the acquisition cost of the asset."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_account_account__l10n_lt_saft_account_table_description
+msgid ""
+"Account name according to the VMI account classifiers. The account name is "
+"used when empty."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.view_account_form_inherit_l10n_lt_saft
+msgid "Account name is used if empty"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_form
+msgid "Accounting"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__tax_accounting_basis__k
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__res_company__l10n_lt_saft_tax_accounting_basis__k
+msgid "Accrual (K)"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__depreciation_account_id
+msgid "Accumulated Depreciation Account"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__acquisition_value
+msgid "Acquisition Cost"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__acquisition_date
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__shares_acquisition_date
+msgid "Acquisition Date"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__acquisition_move_id
+msgid "Acquisition Entry"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_asset.py:0
+msgid "Acquisition of %s"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__active
+msgid "Active"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_form
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_search
+msgid "Archived"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__account_id
+msgid "Asset Account"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.ui.menu,name:l10n_lt_saft_export.menu_l10n_lt_saft_asset
+msgid "Assets"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.actions.act_window,help:l10n_lt_saft_export.action_l10n_lt_saft_asset
+msgid ""
+"Assets registered here are reported in the SAF-T parts \"Assets\" and "
+"\"Asset transactions\"."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__account_id
+msgid "Capital Account"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__tax_accounting_basis__p
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__res_company__l10n_lt_saft_tax_accounting_basis__p
+msgid "Cash (P)"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_export_wizard_form
+msgid "Close"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__start_date
+msgid "Commissioning Date"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model,name:l10n_lt_saft_export.model_res_company
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__company_id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__company_id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__company_id
+msgid "Company"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model,name:l10n_lt_saft_export.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__create_uid
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__create_uid
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__create_date
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__create_date
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__currency_id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__data_type
+msgid "Data Type"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_asset.py:0
+msgid "Depreciation %(month)s of %(asset)s"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_l10n_lt_saft_asset__start_date
+msgid "Depreciation starts on the first day of the month following this date."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__name
+msgid "Description"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_account_account__display_name
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_account_journal__display_name
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__display_name
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export__display_name
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__display_name
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_company__display_name
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__disposal_date
+msgid "Disposal Date"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__disposal_move_id
+msgid "Disposal Entry"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_search
+msgid "Disposed"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__state__done
+msgid "Done"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__entity
+msgid "Entity"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__data_type__f
+msgid "F - Complete file"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__file_name
+msgid "File Name"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__data_type__gl
+msgid "GL - General ledger"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_export_wizard_form
+msgid "Generate"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_account_journal__l10n_lt_saft_journal_type
+msgid ""
+"Group of journals this journal belongs to "
+"(GeneralLedgerEntries/Journals/Journal/Type)."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.res_config_settings_view_form_inherit_l10n_lt_saft
+msgid "Header data of the Lithuanian SAF-T file."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__account_account__l10n_lt_saft_account_type__i
+msgid "I - Liabilities"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_account_account__id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_account_journal__id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export__id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_company__id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__account_account__l10n_lt_saft_account_type__it
+msgid "IT - Non-current assets"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_form
+msgid "Identification"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_res_company__l10n_lt_saft_entity
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_res_config_settings__l10n_lt_saft_entity
+msgid ""
+"Identifier of the unit / information system the SAF-T file is generated from"
+" (Header/Entity). Only capital letters, digits and underscores, max. 20 "
+"characters."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_search
+msgid "In use"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__code
+msgid "Inventory Number"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model,name:l10n_lt_saft_export.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__account_account__l10n_lt_saft_account_type__kt
+msgid "KT - Other"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__write_uid
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__write_uid
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__write_date
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__write_date
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_l10n_lt_saft_owner__owner_code
+msgid ""
+"Legal entity code or personal identifier of the owner. The company ID or tax"
+" ID of the partner is used when empty."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.module.module,shortdesc:base.module_l10n_lt_saft_export
+msgid "Lithuania SAF-T Export"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model,name:l10n_lt_saft_export.model_l10n_lt_saft_export_wizard
+msgid "Lithuanian SAF-T export"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model,name:l10n_lt_saft_export.model_l10n_lt_saft_export
+msgid "Lithuanian SAF-T generator"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__data_type__mg
+msgid "MG - Movement of goods"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__account_account__l10n_lt_saft_account_type__nk
+msgid "NK - Equity"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__shares_quantity
+msgid "Number of Shares"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__partner_id
+msgid "Owner"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__owner_code
+msgid "Owner Code"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.ui.menu,name:l10n_lt_saft_export.menu_l10n_lt_saft_owner
+msgid "Owners"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__account_account__l10n_lt_saft_account_type__p
+msgid "P - Income"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__data_type__pa
+msgid "PA - Payments"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__data_type__pi
+msgid "PI - Purchase invoices"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_owner__shares_type__pp
+msgid "PP - Ordinary shares"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_owner__shares_type__prv
+msgid "PRV - Preference shares"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.actions.act_window,help:l10n_lt_saft_export.action_l10n_lt_saft_asset
+msgid "Register a fixed asset"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__registration_number
+msgid "Registration ID"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_l10n_lt_saft_asset__registration_number
+msgid ""
+"Registration details of assets subject to mandatory registration, e.g. real "
+"property number."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_res_company__l10n_lt_saft_contact_id
+#: model:ir.model.fields,help:l10n_lt_saft_export.field_res_config_settings__l10n_lt_saft_contact_id
+msgid ""
+"Representative of the company written in the SAF-T header. The company phone"
+" is used when the contact has none."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__account_account__l10n_lt_saft_account_type__s
+msgid "S - Costs"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.ui.menu,name:l10n_lt_saft_export.menu_l10n_lt_saft_config
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.view_account_form_inherit_l10n_lt_saft
+msgid "SAF-T (LT)"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_account_account__l10n_lt_saft_account_type
+msgid "SAF-T Account Type"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_form
+msgid "SAF-T Asset"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model,name:l10n_lt_saft_export.model_l10n_lt_saft_asset
+msgid "SAF-T Asset (Lithuania)"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.actions.act_window,name:l10n_lt_saft_export.action_l10n_lt_saft_asset
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_list
+msgid "SAF-T Assets"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_account_account__l10n_lt_saft_account_table_id
+msgid "SAF-T Classifier Code"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_account_account__l10n_lt_saft_account_table_description
+msgid "SAF-T Classifier Name"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_company__l10n_lt_saft_contact_id
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_config_settings__l10n_lt_saft_contact_id
+msgid "SAF-T Contact Person"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_company__l10n_lt_saft_entity
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_config_settings__l10n_lt_saft_entity
+msgid "SAF-T Entity"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.res_config_settings_view_form_inherit_l10n_lt_saft
+msgid "SAF-T Export"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.ui.menu,name:l10n_lt_saft_export.menu_l10n_lt_saft_export
+msgid "SAF-T Export (LT)"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/wizard/l10n_lt_saft_export_wizard.py:0
+#: model:ir.actions.act_window,name:l10n_lt_saft_export.action_l10n_lt_saft_export_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_export_wizard_form
+msgid "SAF-T Export (Lithuania)"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__file_data
+msgid "SAF-T File"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_account_journal__l10n_lt_saft_journal_type
+msgid "SAF-T Journal Type"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.module.module,summary:base.module_l10n_lt_saft_export
+msgid ""
+"SAF-T LT (XSD 2.01) export for the Lithuanian State Tax Inspectorate (VMI)"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.res_config_settings_view_form_inherit_l10n_lt_saft
+msgid "SAF-T Lithuania"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model,name:l10n_lt_saft_export.model_l10n_lt_saft_owner
+msgid "SAF-T Owner (Lithuania)"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.actions.act_window,name:l10n_lt_saft_export.action_l10n_lt_saft_owner
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_company__l10n_lt_saft_owner_ids
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_owner_list
+msgid "SAF-T Owners"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_company__l10n_lt_saft_tax_accounting_basis
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_res_config_settings__l10n_lt_saft_tax_accounting_basis
+msgid "SAF-T Tax Accounting Basis"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__l10n_lt_saft_export_wizard__data_type__si
+msgid "SI - Sales invoices"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_export.py:0
+msgid "Set a phone number on the company or on the SAF-T contact person."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_export.py:0
+msgid "Set the Company ID (JAK) or the Tax ID of the company."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_export.py:0
+msgid "Set the city and the postal code of the company."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__shares_amount
+msgid "Shares Amount"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__shares_type
+msgid "Shares Type"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__state
+msgid "State"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__partner_id
+msgid "Supplier"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields.selection,name:l10n_lt_saft_export.selection__account_account__l10n_lt_saft_account_type__tt
+msgid "TT - Current assets"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__tax_accounting_basis
+msgid "Tax Accounting Basis"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_export.py:0
+msgid ""
+"The SAF-T file cannot be generated:\n"
+"%s"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_asset.py:0
+msgid "The acquisition cost cannot be negative."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_asset.py:0
+msgid "The commissioning date cannot be before the acquisition date."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_asset.py:0
+msgid "The disposal date cannot be before the commissioning date."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/wizard/l10n_lt_saft_export_wizard.py:0
+msgid ""
+"The generated file does not match the SAF-T XSD 2.01:\n"
+"%s"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.constraint,message:l10n_lt_saft_export.constraint_l10n_lt_saft_asset_code_company_uniq
+msgid "The inventory number must be unique per company."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_export.py:0
+msgid "The start date must be before the end date."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_asset.py:0
+msgid "The useful life must be positive."
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_list
+msgid "Total"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_owner__shares_transfer_date
+msgid "Transfer Date"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__useful_life_months
+msgid "Useful Life (months)"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_export_wizard__validate_xsd
+msgid "Validate against XSD"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_form
+msgid "Valuation"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model:ir.model.fields,field_description:l10n_lt_saft_export.field_l10n_lt_saft_asset__valuation_class
+msgid "Valuation Class"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#. odoo-python
+#: code:addons/l10n_lt_saft_export/models/l10n_lt_saft_asset.py:0
+msgid "Write-off of %s"
+msgstr ""
+
+#. module: l10n_lt_saft_export
+#: model_terms:ir.ui.view,arch_db:l10n_lt_saft_export.l10n_lt_saft_asset_form
+msgid "e.g. Delivery van"
+msgstr ""
